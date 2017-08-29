@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Friend Tracker</string>
+    <string name="btn_pick">Pick Contact</string>
+    <string name="listview_title">Friend List</string>
+    <string name="friend_s_photo">Friend\'s Photo</string>
+    <string name="add_friend">Add Friend</string>
+    <string name="friend_manage">Friend</string>
+    <string name="btn_select_friend">Pick Friend</string>
+    <string name="btn_view">do</string>
+    <string name="meeting_manage">Meeting</string>
+    <string name="add_meeting">New Meeting</string>
+    <string name="add_edit_meeting">Add/Edit Meeting</string>
+    <string name="action_favorite">Favorite</string>
+    <string name="action_settings">Setting</string>
+    <string name="action_sort">ASC</string>
+    <string name="action_new_meeting">New</string>
+    <string name="button_name">Button</string>
+    <string name="meeting_item_title">Title:</string>
+    <string name="meeting_item_start_date">StartTime:</string>
+    <string name="meeting_item_end_date">EndTime:</string>
+    <string name="meeting_item_person_number">Attendees:</string>
+    <string name="meeting_item_location">Location:</string>
+    <string name="pick_time">Select Time</string>
+    <string name="pick_date">Select Date</string>
+    <string name="btn_ok">OK</string>
+    <string name="btn_save">Save</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="pop_menu_delete">Delete Item</string>
+    <string name="pop_menu_edit">Edit Item</string>
+    <string name="friend_tracker">Friend Tracker</string>
+    <string name="add_friend_new">Add Friend</string>
+    <string name="email">Email</string>
+    <string name="name">Name</string>
+</resources>

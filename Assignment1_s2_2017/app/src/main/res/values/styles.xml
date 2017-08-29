@@ -1,0 +1,50 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="MeetingLableValue">
+        <item name="android:layout_width">100sp</item>
+        <item name="android:layout_height">25sp</item>
+        <item name="android:textAlignment">textEnd</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:background">@color/colorSkyBlue</item>
+    </style>
+
+    <style name="MeetingEditValue">
+        <item name="android:layout_width">280sp</item>
+        <item name="android:layout_height">25sp</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:paddingStart">4sp</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+
+    <style name="MeetingLableValue_big">
+        <item name="android:layout_width">100sp</item>
+        <item name="android:layout_height">40sp</item>
+        <item name="android:textAlignment">textEnd</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="MeetingEditValue_big">
+        <item name="android:layout_width">280sp</item>
+        <item name="android:layout_height">40sp</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:paddingStart">4sp</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="FriendItemTextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">20sp</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+</resources>

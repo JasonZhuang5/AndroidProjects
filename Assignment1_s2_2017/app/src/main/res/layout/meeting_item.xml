@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/root_meeting_item"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/id_meeting_item"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:visibility="invisible"/>
+
+    <GridLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#cccccc"
+        android:padding="2dp"
+        android:columnCount="2"
+        android:rowCount="5">
+
+        <TextView
+            android:id="@+id/lab_title_meeting_item"
+            android:background="@color/colorAccent"
+            style="@style/MeetingLableValue"
+            android:text="@string/meeting_item_title"
+            />
+
+        <TextView
+            android:id="@+id/lab_start_meeting_item"
+            style="@style/MeetingLableValue"
+            android:text="@string/meeting_item_start_date"
+            />
+
+        <TextView
+            android:id="@+id/lab_end_meeting_item"
+            android:text="@string/meeting_item_end_date"
+            style="@style/MeetingLableValue"/>
+
+        <TextView
+            android:id="@+id/lab_loc_meeting_item"
+            android:text="@string/meeting_item_location"
+            style="@style/MeetingLableValue"/>
+
+        <TextView
+            android:id="@+id/lab_numb_meeting_item"
+            android:text="@string/meeting_item_person_number"
+            style="@style/MeetingLableValue"/>
+
+        <!-- ################################################### -->
+        <TextView
+            android:id="@+id/title_meeting_item"
+            android:background="@color/colorAccent"
+            style="@style/MeetingEditValue"
+            />
+
+        <TextView
+            android:id="@+id/start_meeting_item"
+            style="@style/MeetingEditValue"
+            />
+
+        <TextView
+            android:id="@+id/end_meeting_item"
+            style="@style/MeetingEditValue"
+            />
+
+        <TextView
+            android:id="@+id/location_meeting_item"
+            style="@style/MeetingEditValue" />
+
+        <TextView
+            android:id="@+id/numbers_meeting_item"
+            style="@style/MeetingEditValue"/>
+
+    </GridLayout>
+</RelativeLayout>

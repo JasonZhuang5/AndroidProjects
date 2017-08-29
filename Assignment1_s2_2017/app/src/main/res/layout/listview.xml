@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/linerlayoutFriend"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:paddingRight="2dp">
+
+    <ImageView
+        android:id="@+id/friend_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/friend_s_photo"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/linerlayoutFriendDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="2dp">
+
+        <TextView
+            android:id="@+id/friend_id"
+            android:layout_width="200dp"
+            android:layout_height="1dp"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/friend_icon"
+            android:text="My id is uio"
+            android:textSize="18sp"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:id="@+id/friend_name"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/friend_id"
+            android:layout_margin="2dp"
+            android:layout_toEndOf="@+id/friend_icon"
+            android:text="My name is John"
+            android:textSize="18sp"
+            />
+
+        <TextView
+            android:id="@+id/friend_email"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/friend_name"
+            android:layout_margin="2dp"
+            android:layout_toEndOf="@id/friend_icon"
+            android:text="friend@gmail.com"
+            android:textSize="18sp"
+            />
+
+        <!-- DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/friend_email"
+        android:layout_toEndOf="@id/friend_icon"
+        android:layout_alignParentStart="true"/ -->
+
+
+    </LinearLayout>
+
+    <Button android:id="@+id/btn_view"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="@string/btn_view"
+            android:layout_gravity="bottom|right" />
+
+</LinearLayout>
