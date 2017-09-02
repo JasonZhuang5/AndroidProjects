@@ -42,8 +42,13 @@
             style="@style/FriendItemTextView"
             />
 
-        <TextView
+        <!-- TextView
             android:id="@+id/friend_item_birthday"
+            style="@style/FriendItemTextView"
+            / -->
+
+        <TextView
+            android:id="@+id/friend_item_location"
             style="@style/FriendItemTextView"
             />
 

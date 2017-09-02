@@ -46,6 +46,8 @@ public class MeetingDetailActivity extends AppCompatActivity
     private TimePickerDialog.OnTimeSetListener mTimeSetListener_e;
     private SimpleDateFormat sdfDate = new SimpleDateFormat("MMM dd,yyyy,h.m " +
             "aaa");
+    private SimpleDateFormat sdfTime = new SimpleDateFormat("hh:mm:ss aaa");
+
     private int editFlag = 0;
 
     private Calendar dStart = Calendar.getInstance();
@@ -280,27 +282,30 @@ public class MeetingDetailActivity extends AppCompatActivity
             @Override
             public void onFocusChange(View v, boolean hasFocus)
             {
+                String s_start_meeting_time = et_start_meeting.getText().toString();
+                if (s_start_meeting_time==null || s_start_meeting_time.equals(""))
+                {
+                    return;
+                }
                 if(hasFocus)
                 {
-                    Intent myIntent = new Intent(MeetingDetailActivity.this, MeetingFriendActivity.class);
-                    if (lstMeetingFriends == null || lstMeetingFriends.size() == 0)
-                    {
-                        myIntent.putExtra("friendId", new String[]{});
-                    } else
-                    {
-                        String[] arr_friend_id = new String[lstMeetingFriends.size()];
-                        Iterator<Friend> iterator = lstMeetingFriends.iterator();
-                        int i = 0;
-                        while (iterator.hasNext())
-                        {
-                            Friend f = iterator.next();
-                            arr_friend_id[i] = f.getId();
-                            i = i + 1;
-                        }
-                        myIntent.putExtra("friendId", arr_friend_id);
-                    }
-                    startActivityForResult(myIntent, 2);
+                    openFriendActivity(s_start_meeting_time);
                 }
+            }
+        });
+
+        et_persions_numbers.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+
+                String s_start_meeting_time = et_start_meeting.getText().toString();
+                if (s_start_meeting_time==null || s_start_meeting_time.equals(""))
+                {
+                    return;
+                }
+                openFriendActivity(s_start_meeting_time);
             }
         });
 
@@ -476,5 +481,39 @@ public class MeetingDetailActivity extends AppCompatActivity
         Intent intent = new Intent(MeetingDetailActivity.this,MeetingListActivity.class);
         setResult(RESULT_CANCELED,intent);
         finish();
+    }
+
+    private void openFriendActivity(String a_start_meeting_time)
+    {
+        Intent myIntent = new Intent(MeetingDetailActivity.this, MeetingFriendActivity.class);
+        if (lstMeetingFriends == null || lstMeetingFriends.size() == 0)
+        {
+            myIntent.putExtra("friendId", new String[]{});
+        } else
+        {
+            String[] arr_friend_id = new String[lstMeetingFriends.size()];
+            Iterator<Friend> iterator = lstMeetingFriends.iterator();
+            int i = 0;
+            while (iterator.hasNext())
+            {
+                Friend f = iterator.next();
+                arr_friend_id[i] = f.getId();
+                i = i + 1;
+            }
+            myIntent.putExtra("friendId", arr_friend_id);
+        }
+        //put argument meeting time
+        //String s_start_meeting_time = et_start_meeting.getText().toString();
+        try
+        {
+            meeting_start_date =   sdfDate.parse(a_start_meeting_time);
+        } catch (ParseException e)
+        {
+            e.printStackTrace();
+        }
+
+        myIntent.putExtra("meetingTime", sdfTime.format(meeting_start_date));
+
+        startActivityForResult(myIntent, 2);
     }
 }

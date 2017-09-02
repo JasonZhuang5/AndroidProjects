@@ -38,7 +38,8 @@ public class FriendListViewAdapter extends BaseAdapter
         public TextView  friend_id;
         public TextView  friend_name;
         public TextView  friend_email;
-        public TextView  friend_birthday;
+        //public TextView  friend_birthday;
+        public TextView  friend_location;
         public LinearLayout friend_item_root;
         public CheckBox  friend_ckb;
     }
@@ -101,8 +102,12 @@ public class FriendListViewAdapter extends BaseAdapter
                     .friend_item_name);
             holder.friend_email = (TextView)convertView.findViewById(R.id
                     .friend_item_email);
-            holder.friend_birthday = (TextView)convertView.findViewById(R.id
-                    .friend_item_birthday);
+
+            //holder.friend_birthday = (TextView)convertView.findViewById(R.id
+             //       .friend_item_birthday);
+
+            holder.friend_location = (TextView)convertView.findViewById(R.id
+                    .friend_item_location);
 
             holder.friend_ckb = (CheckBox)convertView.findViewById(R.id
                     .friend_item_ckb);
@@ -119,8 +124,10 @@ public class FriendListViewAdapter extends BaseAdapter
                 ("friend_item_name"));
         holder.friend_email.setText((String)listItem.get(position).get
                 ("friend_item_email"));
-        holder.friend_ckb.setChecked(getIsSelected().get(position));
+        holder.friend_location.setText((String)listItem.get(position).get
+                ("friend_item_location"));
 
+        holder.friend_ckb.setChecked(getIsSelected().get(position));
         holder.friend_ckb.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v)
