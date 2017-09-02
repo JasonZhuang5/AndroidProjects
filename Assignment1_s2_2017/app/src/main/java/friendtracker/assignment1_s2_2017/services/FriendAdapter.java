@@ -17,12 +17,14 @@ import friendtracker.assignment1_s2_2017.entities.Friend;
 /**
  * Created by shawn on 2017/8/16.
  */
-
+/*
+ * This class is the adapter of the friend list recycler view
+ */
 public class FriendAdapter extends RecyclerView.Adapter<FriendAdapter.FriendAdapterViewHolder>
 {
     private ArrayList<Friend> friends;
     private ListItemClickListener mOnclickListener;
-
+    //inner class view holder to get list item
     class FriendAdapterViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener
     {
         TextView listItemName;
@@ -45,7 +47,7 @@ public class FriendAdapter extends RecyclerView.Adapter<FriendAdapter.FriendAdap
 
         }
     }
-
+    //a click listener interface
     public interface ListItemClickListener
     {
         void onListItemClick(int clickedItemIndex);
@@ -69,6 +71,7 @@ public class FriendAdapter extends RecyclerView.Adapter<FriendAdapter.FriendAdap
     }
 
     @Override
+    //bind the data to the view holder
     public void onBindViewHolder(FriendAdapterViewHolder holder, int position)
     {
         Friend friend = friends.get(position);
@@ -79,6 +82,7 @@ public class FriendAdapter extends RecyclerView.Adapter<FriendAdapter.FriendAdap
     }
 
     @Override
+    //creat the view holder
     public FriendAdapterViewHolder onCreateViewHolder(ViewGroup parent, int viewType)
     {
         Context context = parent.getContext();

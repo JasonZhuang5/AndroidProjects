@@ -21,7 +21,10 @@ import friendtracker.assignment1_s2_2017.entities.Friend;
 import friendtracker.assignment1_s2_2017.entities.FriendList;
 import friendtracker.assignment1_s2_2017.services.ContactDataManager;
 import friendtracker.assignment1_s2_2017.utility.AppUtility;
-
+/*
+This class is the edit friend activity where user can add new friend from contact and
+editing existed friends.
+ */
 public class EditFriendActivity extends AppCompatActivity {
 
     protected static final int PICK_CONTACTS = 100;
@@ -67,7 +70,7 @@ public class EditFriendActivity extends AppCompatActivity {
                 }
             }
         });
-
+        //judge if the friend exists
         friendId = this.getIntent().getStringExtra("EXTRA_ID");
         if (friendId == null || friendId.equals(""))
         {
@@ -82,23 +85,7 @@ public class EditFriendActivity extends AppCompatActivity {
             editEmail.setText(emailOld);
             editBirthday.setText(birthdayOld);
         }
-        /*
-        editBirthday.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v) {
-                Calendar c = Calendar.getInstance();
-                new DatePickerDialog(EditFriendActivity.this, new DatePickerDialog.OnDateSetListener()
-                {
-                    @Override
-                    public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-                        editBirthday.setText(dayOfMonth+"/"+(monthOfYear+1)+"/"+year);
-                    }
-                }, c.get(Calendar.YEAR), c.get(Calendar.MONTH), c.get(Calendar.DAY_OF_MONTH)).show();
-
-            }
-        });
-        */
+        //store the friend details in list
         done.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -152,6 +139,7 @@ public class EditFriendActivity extends AppCompatActivity {
     }
 
     @Override
+    //pick the contact from the address
     protected void onActivityResult(int requestCode, int resultCode, Intent data)
     {
         if (requestCode == PICK_CONTACTS)
