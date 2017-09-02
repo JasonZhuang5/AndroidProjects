@@ -97,8 +97,8 @@
         jumboMode="true"
         optimize="true"
         revision="26.0.0"
-        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
-        <dex dex="D:\GitHub\AndroidProjects\Assignment1_s2_2017\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_bfdc065532585f6c0d2c322d24505ebea83977e6\classes.dex" />
+        sha1="966c6f5a0e6216dcfe38369f633ddcda398799f1">
+        <dex dex="D:\Mobile\Assignment1_s2_2017\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_6309cb9aebe24039693f0dbd50d9e8a208bb4e3d\classes.dex" />
     </item>
     <item
         is-multidex="true"
